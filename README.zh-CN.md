@@ -84,3 +84,7 @@ Use $cl-onboard to adopt Compound Lite in this repo. Start with a read-only scan
 ```text
 Use $cl-strategy to create STRATEGY.md, then use $cl-ideate to explore initial product/Agent directions.
 ```
+
+## 致谢
+
+Compound Lite 参考了 [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin)，并在其 Compound Engineering 理念基础上，简化成适用于 Codex 的仓库级、Level 1 轻量工作流。
