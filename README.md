@@ -1,5 +1,7 @@
 # Compound Lite for Codex
 
+[中文](README.zh-CN.md) | English
+
 Compound Lite is a lightweight, repo-scoped workflow system inspired by compound engineering. It is designed for solo developers and Agent-product projects that need durable planning, independent verification, and reusable learnings without adopting a large multi-agent automation stack.
 
 It is intentionally **Level 1 semi-automatic**:
