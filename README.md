@@ -19,6 +19,7 @@ template/
   .agents/skills/          # Codex repo-scoped skills
   .codex/agents/           # Optional Codex custom agents for role separation
   docs/                    # Artifact folders and README files
+  tools/render_compound_html.py
 
 tools/
   apply.py                 # Safely copy the template into a target repo
@@ -67,11 +68,28 @@ $cl-review       -> planning consistency gate
 $cl-work         -> local code + tests
 $cl-verify       -> independent verification
 $cl-compound     -> docs/solutions/
+$cl-render       -> optional read-only HTML views
 ```
 
 `$cl-review` is only for planning stages. Execution stays `$cl-work -> $cl-verify`.
 
 `$cl-product-pulse` is included as a future-facing placeholder. It only describes the intended read-only pulse workflow and does not connect to analytics, tracing, payments, or databases in V1.
+
+## HTML decision editor mode
+
+Planning-oriented skills can optionally use `~html` to create a temporary browser editor before a Markdown artifact is finalized.
+
+```text
+$cl-plan
+-> writes Markdown
+
+$cl-plan ~html
+-> writes docs/.compound-lite/drafts/...-editor.html
+-> user exports Markdown
+-> exported Markdown becomes the formal artifact
+```
+
+Generated HTML editors and views are human-facing aids only. Markdown remains the source of truth for future Agent work. There is no `cl-finalize`, `~html-only`, or `~import` step.
 
 ## Recommended first run in an existing project
 

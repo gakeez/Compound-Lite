@@ -70,6 +70,42 @@ $cl-compound
 | cl-debug | A bug or failure needs root-cause analysis | The task is pure ideation |
 | cl-compound | A durable learning should be saved | The change was trivial |
 | cl-product-pulse | Future read-only product reporting | V1 production-data integration |
+| cl-render | You want a read-only HTML view of a finalized Markdown artifact | You need to edit or decide before finalizing Markdown |
+
+## HTML decision editor mode
+
+Use `~html` when you want to make a human judgment before committing to a Markdown artifact.
+
+Examples:
+
+```text
+$cl-ideate ~html "Improve Agent onboarding"
+$cl-brainstorm ~html docs/ideation/2026-05-09-agent-onboarding.md
+$cl-plan ~html docs/brainstorms/2026-05-09-agent-onboarding-requirements.md
+$cl-verify ~html docs/plans/2026-05-09-agent-onboarding-plan.md
+```
+
+The skill generates a temporary HTML editor under `docs/.compound-lite/drafts/`.
+Open it in a browser, edit or select options, then click Export Markdown.
+
+The exported Markdown is the final artifact. Move or save it to the expected
+`docs/` directory before using it with the next Compound Lite stage.
+
+No `cl-finalize` step exists. No `~html-only` mode exists. No `~import` mode exists.
+
+`cl-design ~html` is not part of V1.1. Use the normal Markdown design artifact
+flow for now.
+
+## Read-only HTML views
+
+Use `cl-render` after a Markdown artifact is finalized:
+
+```text
+$cl-render docs/plans/2026-05-09-agent-onboarding-plan.md
+```
+
+It writes a read-only HTML view under `docs/.compound-lite/views/`. The source
+Markdown remains the artifact of record.
 
 ## Minimal prompt examples
 

@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 .compound-lite-incoming/
+manual-test-html/

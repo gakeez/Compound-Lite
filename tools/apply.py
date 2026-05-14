@@ -17,6 +17,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "template"
 
 
+def should_skip_template_file(src: Path) -> bool:
+    rel = src.relative_to(TEMPLATE)
+    return (
+        "__pycache__" in rel.parts
+        or src.suffix == ".pyc"
+        or src.name == ".DS_Store"
+    )
+
+
 def copy_file(src: Path, dest: Path, overwrite: bool, incoming_root: Path) -> tuple[str, Path]:
     rel = src.relative_to(TEMPLATE)
     if dest.exists() and not overwrite:
@@ -41,6 +50,8 @@ def apply(target: Path, mode: str, overwrite: bool) -> None:
 
     for src in TEMPLATE.rglob("*"):
         if src.is_dir():
+            continue
+        if should_skip_template_file(src):
             continue
         rel = src.relative_to(TEMPLATE)
         dest = target / rel

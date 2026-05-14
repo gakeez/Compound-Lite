@@ -91,7 +91,13 @@ docs/plans/                       # Implementation plans
 docs/solutions/                   # Durable solved-problem learnings
 docs/pulse-reports/               # Future product pulse reports
 docs/evals/                       # Agent behavior eval cases and criteria
+docs/.compound-lite/drafts/       # Temporary HTML decision editors
+docs/.compound-lite/views/        # Read-only HTML views of Markdown artifacts
 ```
+
+Markdown remains the durable source of truth. Generated HTML files under
+`docs/.compound-lite/` are human-facing aids and should not be used as default
+Agent context.
 
 ## 4. Skill inventory
 
@@ -143,6 +149,12 @@ Captures durable learning under `docs/solutions/` only when the lesson will prev
 
 V1 placeholder. Future read-only reporting workflow for usage, performance, errors, and followups saved to `docs/pulse-reports/`.
 
+### cl-render
+
+Renders a finalized Markdown artifact into a read-only HTML view under
+`docs/.compound-lite/views/`. It does not edit the Markdown artifact and does
+not create pre-decision editors.
+
 ## 5. Role separation
 
 Do not default to automatic many-agent parallelism. Instead, separate roles by phase and artifact:
@@ -179,7 +191,17 @@ The builder should not be the only reviewer of its own work. The verifier should
 4. Write one active plan for current work if needed.
 5. Start using the full workflow for the next non-trivial task.
 
-## 7. V2 roadmap
+## 7. V1.1 HTML decision editor mode
+
+- Add optional `~html` support to planning-oriented skills: `cl-strategy`, `cl-ideate`, `cl-brainstorm`, `cl-plan`, and `cl-verify`.
+- Keep `cl-work` execution-only; it does not support `~html`.
+- Generate temporary HTML editors under `docs/.compound-lite/drafts/`.
+- Export Markdown directly from the HTML editor; exported Markdown is the formal artifact.
+- Add `tools/render_compound_html.py` with stdlib-only `decision` and `view` commands.
+- Add `cl-render` for finalized Markdown to read-only HTML views.
+- Keep `cl-design ~html` as a future extension, not part of V1.1.
+
+## 8. V2 roadmap
 
 - Implement `cl-product-pulse` data-source setup and report generation.
 - Add optional thin adapters when repeated mistakes appear in a real stack.

@@ -32,3 +32,6 @@ Generate a compact, read-only report covering:
 4. Followups.
 
 Reports should be saved to `docs/pulse-reports/`.
+
+Future versions may support HTML report views for finalized pulse reports, but
+V1 does not connect data sources and does not support `~html`.

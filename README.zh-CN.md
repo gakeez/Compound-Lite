@@ -19,6 +19,7 @@ template/
   .agents/skills/          # Codex 仓库级 skills
   .codex/agents/           # 可选的 Codex 自定义 agents，用于角色分离
   docs/                    # 产物目录和 README 文件
+  tools/render_compound_html.py
 
 tools/
   apply.py                 # 安全地把模板复制到目标仓库
@@ -67,11 +68,28 @@ $cl-review       -> 策划一致性审查
 $cl-work         -> 本地代码和测试
 $cl-verify       -> 独立验证
 $cl-compound     -> docs/solutions/
+$cl-render       -> 可选的只读 HTML 视图
 ```
 
 `$cl-review` 只用于策划阶段。执行阶段保持 `$cl-work -> $cl-verify`。
 
 `$cl-product-pulse` 当前是面向未来的占位 skill。V1 中它只描述预期的只读产品脉搏流程，不会连接 analytics、tracing、payment 或数据库。
+
+## HTML 决策编辑器模式
+
+策划类 skill 可以选择使用 `~html`，在正式 Markdown 产物定稿前生成临时浏览器编辑器。
+
+```text
+$cl-plan
+-> 直接写 Markdown
+
+$cl-plan ~html
+-> 写入 docs/.compound-lite/drafts/...-editor.html
+-> 用户导出 Markdown
+-> 导出的 Markdown 成为正式产物
+```
+
+生成的 HTML editor 和 view 只给人阅读、判断、编辑。Markdown 仍然是后续 Agent 工作的唯一 source of truth。没有 `cl-finalize`、`~html-only` 或 `~import` 步骤。
 
 ## 已有项目的推荐第一次运行
 
