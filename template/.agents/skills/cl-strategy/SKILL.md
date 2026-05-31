@@ -32,14 +32,6 @@ Strategy is not a feature list. It is the durable answer to:
 6. Write or update `STRATEGY.md`.
 7. End by naming which downstream skill should run next.
 
-If arguments include `~html`, enter HTML decision mode instead of writing
-`STRATEGY.md`. Use this only for major strategy revisions that benefit from
-browser-based comparison and editing. Read `references/html-decision-mode.md`,
-generate a compact decision model under `docs/.compound-lite/drafts/strategy/`,
-run `tools/render_compound_html.py`, and stop after telling the user where to
-open the editor. The exported Markdown from that editor is the strategy artifact
-the user can apply to `STRATEGY.md`.
-
 ## STRATEGY.md structure
 
 ```md
@@ -63,6 +55,5 @@ last_updated:
 - Do not write implementation plans.
 - Do not update issue trackers.
 - Do not change code.
-- Do not create `cl-finalize`, `~import`, or `~html-only` flows.
 
-Read `references/strategy-interview.md` and `references/agent-native-lens.md` before interviewing. When using `~html`, also read `references/html-decision-mode.md`.
+Read `references/strategy-interview.md` and `references/agent-native-lens.md` before interviewing.

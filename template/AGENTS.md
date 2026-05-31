@@ -35,16 +35,6 @@ across strategy, user-confirmed decisions, and planning artifacts, then stops
 for user confirmation. It does not replace `cl-verify`, and execution stages do
 not need an extra Review gate beyond `cl-work -> cl-verify`.
 
-## HTML decision editors
-
-- Planning-oriented skills may support `~html` mode for human-facing decision and editing interfaces.
-- `~html` mode creates temporary HTML editors under `docs/.compound-lite/drafts/`.
-- These HTML editors are not source of truth.
-- The user exports Markdown from the HTML editor. The exported Markdown file is the formal artifact.
-- When a Markdown artifact exists, read the Markdown artifact instead of generated HTML or JSON drafts.
-- Do not use generated HTML as context unless the task is specifically about editing the HTML renderer or debugging the HTML editor.
-- Do not create `cl-finalize`, `~import`, or `~html-only` flows. Exported Markdown is final.
-
 ## Safety boundaries
 
 Do not automatically:

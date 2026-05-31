@@ -21,13 +21,6 @@ REQUIRED = [
     ".agents/skills/cl-debug/SKILL.md",
     ".agents/skills/cl-compound/SKILL.md",
     ".agents/skills/cl-product-pulse/SKILL.md",
-    ".agents/skills/cl-render/SKILL.md",
-    ".agents/skills/cl-strategy/references/html-decision-mode.md",
-    ".agents/skills/cl-ideate/references/html-decision-mode.md",
-    ".agents/skills/cl-brainstorm/references/html-decision-mode.md",
-    ".agents/skills/cl-plan/references/html-decision-mode.md",
-    ".agents/skills/cl-verify/references/html-decision-mode.md",
-    "tools/render_compound_html.py",
     "docs/ideation/README.md",
     "docs/brainstorms/README.md",
     "docs/designs/README.md",
@@ -35,9 +28,6 @@ REQUIRED = [
     "docs/solutions/README.md",
     "docs/pulse-reports/README.md",
     "docs/evals/README.md",
-    "docs/.compound-lite/README.md",
-    "docs/.compound-lite/drafts/README.md",
-    "docs/.compound-lite/views/README.md",
 ]
 
 

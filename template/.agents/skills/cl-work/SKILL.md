@@ -19,10 +19,6 @@ Implement an existing plan locally using Level 1 automation.
 8. Stop and report if implementation discovery invalidates the plan.
 9. Finish with a summary and recommend `cl-verify`.
 
-If the user passes `~html`, explain that `cl-work` is execution-only and does
-not generate HTML decision editors. Suggest using `cl-plan ~html` before
-implementation or `cl-verify ~html` after implementation.
-
 ## Boundaries
 
 - Do not commit.
@@ -31,7 +27,6 @@ implementation or `cl-verify ~html` after implementation.
 - Do not deploy.
 - Do not mutate external systems.
 - Ask before adding dependencies, changing security-sensitive behavior, changing Agent tool permissions, or running migrations.
-- Do not create HTML decision editors from `cl-work`.
 
 ## Completion summary
 

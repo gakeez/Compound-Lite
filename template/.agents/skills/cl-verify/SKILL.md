@@ -19,13 +19,6 @@ Verify work from an independent perspective. Do not rely on the builder's explan
 8. For Agent behavior changes, load the Agent-native lens and check `docs/evals/`.
 9. Report findings and residual risks.
 
-If arguments include `~html`, enter HTML decision mode instead of writing a
-durable verification report automatically. Read `references/html-decision-mode.md`,
-generate a compact decision model under `docs/.compound-lite/drafts/verify/`,
-run `tools/render_compound_html.py`, and stop after telling the user where to
-open the editor. The user may export Markdown from that editor and choose where
-to save the report.
-
 ## Default posture
 
 - Review first.
@@ -33,7 +26,6 @@ to save the report.
 - Do not rewrite implementation unless the user explicitly asks.
 - If tests are missing, recommend focused tests or ask before adding them.
 - Do not commit, push, open PRs, deploy, or mutate external systems.
-- Do not create `cl-finalize`, `~import`, or `~html-only` flows.
 
 ## Output
 
@@ -47,4 +39,4 @@ Risks:
 Recommended next step:
 ```
 
-Read `references/risk-lenses.md`, `references/verification-resolver.md`, and `references/agent-native-lens.md` before reviewing. When using `~html`, also read `references/html-decision-mode.md`.
+Read `references/risk-lenses.md`, `references/verification-resolver.md`, and `references/agent-native-lens.md` before reviewing.

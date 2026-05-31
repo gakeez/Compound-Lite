@@ -16,12 +16,6 @@ Define WHAT to build before `cl-plan` defines HOW to build it.
 5. If Agent behavior is involved, load the Agent-native lens.
 6. Write a dated requirements document under `docs/brainstorms/`.
 
-If arguments include `~html`, enter HTML decision mode instead of writing the
-final requirements Markdown artifact. Read `references/html-decision-mode.md`,
-generate a compact decision model under `docs/.compound-lite/drafts/brainstorms/`,
-run `tools/render_compound_html.py`, and stop after telling the user where to
-open the editor. The exported Markdown from that editor is the formal artifact.
-
 ## Output artifact
 
 Use `docs/brainstorms/YYYY-MM-DD-topic-requirements.md`.
@@ -48,6 +42,5 @@ Required sections:
 - Do not choose implementation architecture unless the requirement itself is architectural.
 - Do not write code.
 - Do not skip scope and non-goals.
-- Do not create `cl-finalize`, `~import`, or `~html-only` flows.
 
-Read `references/product-pressure-test.md`, `references/requirements-template.md`, and `references/agent-native-lens.md` when relevant. When using `~html`, also read `references/html-decision-mode.md`.
+Read `references/product-pressure-test.md`, `references/requirements-template.md`, and `references/agent-native-lens.md` when relevant.

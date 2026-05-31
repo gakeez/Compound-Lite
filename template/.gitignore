@@ -2,6 +2,3 @@
 __pycache__/
 *.pyc
 .compound-lite-incoming/
-docs/.compound-lite/drafts/**/*.html
-docs/.compound-lite/drafts/**/*.json
-docs/.compound-lite/views/**/*.html

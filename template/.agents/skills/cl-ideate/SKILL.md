@@ -19,12 +19,6 @@ Generate and critically evaluate ideas. The goal is not more ideas; the goal is 
 8. Select one or a small number for `cl-brainstorm`.
 9. Write a dated artifact under `docs/ideation/` when the decision has durable value.
 
-If arguments include `~html`, enter HTML decision mode instead of writing the
-final Markdown artifact. Read `references/html-decision-mode.md`, generate a
-compact decision model under `docs/.compound-lite/drafts/ideation/`, run
-`tools/render_compound_html.py`, and stop after telling the user where to open
-the editor. The exported Markdown from that editor is the formal artifact.
-
 ## Output artifact
 
 Use `docs/ideation/YYYY-MM-DD-topic.md`.
@@ -48,6 +42,5 @@ Required sections:
 - Do not write requirements.
 - Do not write implementation plans.
 - Do not change code.
-- Do not create `cl-finalize`, `~import`, or `~html-only` flows.
 
-Read `references/idea-frames.md`, `references/critique-rubric.md`, and `references/artifact-policy.md` before writing the artifact. When using `~html`, also read `references/html-decision-mode.md`.
+Read `references/idea-frames.md`, `references/critique-rubric.md`, and `references/artifact-policy.md` before writing the artifact.
